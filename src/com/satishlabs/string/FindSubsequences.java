@@ -1,5 +1,9 @@
 package com.satishlabs.string;
 
+//Print All subsequences of given String
+//String str="abc"
+//Output: a, b, ab, c, ac, bc, abc
+
 import java.util.ArrayList;
 
 public class FindSubsequences {
