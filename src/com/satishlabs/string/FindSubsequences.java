@@ -5,11 +5,30 @@ package com.satishlabs.string;
 //Output: a, b, ab, c, ac, bc, abc
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FindSubsequences {
+	 static List<String> al = new ArrayList<>();
+	 
 	public static void main(String[] args) {
-		ArrayList<String> subSeq = getSubSeq("abc");
+		String str="abc";
+		ArrayList<String> subSeq = getSubSeq(str);
 		System.out.println(subSeq);
+		System.out.println();
+		System.out.println("======================");
+		findsubsequences(str, ""); // Calling a function
+        System.out.println(al);
+		
+	}
+
+	public static void findsubsequences(String s, String str) {
+		if(s.length() ==0) {
+			al.add(str);//
+			return;
+		}
+		// TODO Auto-generated method stub
+		findsubsequences(s.substring(1), str+s.charAt(0));
+		findsubsequences(s.substring(1), str);
 		
 	}
 
