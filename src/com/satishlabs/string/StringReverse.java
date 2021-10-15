@@ -6,6 +6,25 @@ public class StringReverse {
 		System.out.println(reverse);
 		String reverse1 = reverse1("abc xyz");
 		System.out.println(reverse1);
+		
+		String reverseEachWord = reverseEachWord("abc xyz");
+		System.out.println(reverseEachWord);
+		
+	}
+
+	private static String reverseEachWord(String str) {
+		String[] words=str.split(" ");
+		String reverseStr="";
+		
+		for(int i=0; i<words.length; i++) {
+			String word = words[i];
+			String revWord = "";
+			for(int j=word.length()-1; j>=0; j--) {
+				revWord = revWord+word.charAt(j);
+			}
+			reverseStr = reverseStr+revWord+" ";
+		}
+		return reverseStr;
 	}
 
 	private static String reverse1(String str) {
