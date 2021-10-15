@@ -4,6 +4,17 @@ public class StringReverse {
 	public static void main(String[] args) {
 		String reverse = reverse("abc xyz");
 		System.out.println(reverse);
+		String reverse1 = reverse1("abc xyz");
+		System.out.println(reverse1);
+	}
+
+	private static String reverse1(String str) {
+		char[] ch = str.toCharArray();
+		String str1="";
+		for(int i=str.length()-1; i>=0; i--) {
+			str1=str1+ch[i];
+		}
+		return str1;
 	}
 
 	private static String reverse(String str) {
