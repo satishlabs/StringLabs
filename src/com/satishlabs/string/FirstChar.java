@@ -9,8 +9,8 @@ public class FirstChar {
 	private static void firstChar(String str) {
 		String[] strArr = str.split(" ");
 		for(String  s: strArr) {
-			char c = s.charAt(0);
-			System.out.println(s+" : "+s.charAt(0)); 
+			//char c = s.charAt(0);
+			System.out.println(s+" of First char : "+s.charAt(0)+" and Last char : "+s.charAt(s.length()-1)); 
 			
 			
 		}
